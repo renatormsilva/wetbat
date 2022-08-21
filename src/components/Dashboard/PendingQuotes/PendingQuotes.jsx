@@ -49,7 +49,7 @@ export default function PendingQuotes(props) {
             sx={{
               color: "secondary.dark",
               fontWeight: "600",
-              "tr:nth-child(n+2)": fullHeadValues
+              "tr:nth-child(n+13)": fullHeadValues
                 ? { display: "tableColumn" }
                 : { display: "none" },
             }}
