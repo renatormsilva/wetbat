@@ -1,5 +1,40 @@
-export function TeamChat() {
-  return(
-    <Box>Salve</Box>
-  )
+import { Box } from "@mui/material";
+import CardHeader from "../CardHeader";
+import Chats from "./Chats";
+import john from "../../../images/perfil1.jpeg";
+import nathan from "../../../images/perfil2.jpg";
+import karen from "../../../images/perfil3.png";
+import jane from "../../../images/perfil4.jpg";
+
+export default function TeamChat() {
+  const cardName = "Team Chat";
+  return (
+    <Box >
+      <CardHeader cardName={cardName} />
+      <Box sx={{ display: "flex", gap: "1.6rem", flexDirection: "column" }}>
+        <Chats
+          name="Jorge Bush"
+          description="Coustumer service available"
+          photo={john}
+        />
+        <Chats
+          name="Joseph Andrew"
+          description="Coustumer service available"
+          photo={jane}
+        />
+        
+        <Chats
+          name="Stuart Little"
+          description="Coustumer service available"
+          photo={karen}
+        />
+        <Chats
+          name="Peter Jackson"
+          description="Coustumer service available"
+          photo={nathan}
+        />
+        
+      </Box>
+    </Box>
+  );
 }

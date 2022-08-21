@@ -25,7 +25,7 @@ export default function Quotes() {
         borderRadius: "12px"
       }}
     >
-      <PendingQuotes pageHeadValues={pageHeadValues} />
+      <PendingQuotes cardLink="/" pageHeadValues={pageHeadValues} />
     </Box>
   );
 }

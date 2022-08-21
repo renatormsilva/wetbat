@@ -12,7 +12,7 @@ export default function HeadTableQuotes(props) {
       component={Thead}
     >
       <Tr>
-        <Th>ID #</Th>
+        <Th>ID#</Th>
         <Th>NAME</Th>
         <Th>FROM</Th>
         <Th>DESTINATION</Th>

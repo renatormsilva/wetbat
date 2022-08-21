@@ -12,8 +12,8 @@ import MyContext from "../../context/MyContext";
 
 export default function CardHeader(props) {
   const { setRefresh } = useContext(MyContext);
-  
-  
+
+  const currentUrl = window.location.pathname;
   return (
     <Box sx={{ marginBottom: "12px" }}>
       <Box
@@ -57,14 +57,22 @@ export default function CardHeader(props) {
         <Box sx={{ display: "flex" }}>
           {props.cardName === "Pending Quotes" ? (
             <IconButton onClick={() => setRefresh(false)} size="large">
-              <RestartAltIcon  />
+              <RestartAltIcon />
             </IconButton>
           ) : undefined}
-          <Link to={props.fullHeadValues ? "/" : "/quotes"}>
-            <IconButton size="large">
-              <FullscreenExitIcon />
-            </IconButton>
-          </Link>
+          {props.cardName !== "Pending Quotes" ? (
+            <Link to="/">
+              <IconButton size="large">
+                <FullscreenExitIcon />
+              </IconButton>
+            </Link>
+          ) : (
+            <Link to={currentUrl !== "/quotes" ? "/quotes" : "/"}>
+              <IconButton size="large">
+                <FullscreenExitIcon />
+              </IconButton>
+            </Link>
+          )}
         </Box>
       </Box>
       <Divider />

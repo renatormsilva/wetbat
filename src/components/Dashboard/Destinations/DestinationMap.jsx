@@ -8,6 +8,7 @@ import {
 import { useContext } from "react";
 import LocationContext from "../../../context/LocationContext";
 export default function DestinationMap() {
+  const googleKey = process.env.REACT_APP_GOOGLE_KEY
   const { mapLocation, zoom } = useContext(LocationContext);
 
   const [infoWindowVisible, setInfoWindowVisible] = useState(false);
@@ -16,7 +17,7 @@ export default function DestinationMap() {
     <>
       <LoadScript
         id="script-loader"
-        googleMapsApiKey="AIzaSyA3SFMaJ3z6dcq0T6rHADZu1GtCBH3FpTU"
+        googleMapsApiKey={googleKey}
         language={"en"}
         region={"EN"}
         version={"weekly"}

@@ -24,7 +24,7 @@ export default function Destinations() {
         >
           <Box
             sx={{
-              display: ["none", "flex"],
+              display: "flex",
               flexDirection: "column",
               opacity: "0.8",
               zIndex: "999",

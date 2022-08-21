@@ -6,6 +6,7 @@ import api from "../../../services/api";
 import { Table,  Tbody, Tr,  Td } from "react-super-responsive-table";
 import "react-super-responsive-table/dist/SuperResponsiveTableStyle.css";
 import HeadTableQuotes from "./HeadTableQuotes";
+import DeleteIcon from '@mui/icons-material/Delete';
 
 export default function PendingQuotes(props) {
   const [headValues, setHeadValues] = useState([
@@ -38,9 +39,9 @@ export default function PendingQuotes(props) {
   return (
     <Box>
       <MyContext.Provider value={{ quotes, refresh, setRefresh }}>
-        <CardHeader fullHeadValues={fullHeadValues} cardName={cardName} />
+        <CardHeader cardLink="/quotes" fullHeadValues={fullHeadValues} cardName={cardName} />
         <Box
-          sx={{ textAlign: smSizeTable ? "center" : "justify", fontSize: ["0.86rem", "1rem"] }}
+          sx={{ textAlign: smSizeTable ? "center" : "center", fontSize: ["0.86rem", "1rem"] }}
           component={Table}
         >
           <HeadTableQuotes fullHeadValues={fullHeadValues}/>
@@ -77,6 +78,7 @@ export default function PendingQuotes(props) {
                   <Td key={index}>{quote.returnDate}</Td>
                   <Td key={index}>{quote.people}</Td>
                   <Td key={index}>{quote.transportation}</Td>
+                  <DeleteIcon sx={{color: "red"}}/>
                 </Tr>
               );
             })}

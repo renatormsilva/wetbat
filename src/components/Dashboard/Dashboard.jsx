@@ -7,6 +7,9 @@ import PendingQuotes from "./PendingQuotes/PendingQuotes"
 import About from "../Dashboard/About/About"
 import NewLeadsContainer from "./NewLeads/NewLeadsContainer";
 import Destinations from "./Destinations/Destinations"; 
+import  TeamChat from "./TeamChat/TeamChat";
+import Revenue from "./Revenue/Revenue";
+
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",
   ...theme.typography.body2,
@@ -28,7 +31,7 @@ export default function Dashboard() {
           </Item>
         </Box>
         <Box sx={{ gridColumn: ["span 12", "span 12", "span 4"] }}>
-          <Item sx={{ height: "100%", borderRadius: ["0px","0px","12px"]}}>
+          <Item sx={{ height: "100%", borderRadius: ["0px","0px","12px"] }}>
             <PendingQuotes/>
           </Item>
         </Box>
@@ -41,10 +44,10 @@ export default function Dashboard() {
           <Item sx={{ borderRadius: ["0px","0px","12px"]}}><Destinations/></Item>
         </Box>
         <Box sx={{ gridColumn: ["span 12", "span 12", "span 4"] }}>
-          <Item sx={{ borderRadius: ["0px","0px","12px"]}}>xs=8</Item>
+          <Item sx={{ borderRadius: ["0px","0px","12px"], height: "calc(100% - 16px)"}}><TeamChat/></Item>
         </Box>
         <Box sx={{ gridColumn: ["span 12", "span 12", "span 4"] }}>
-          <Item sx={{ borderRadius: ["0px","0px","12px"]}}>xs=8</Item>
+          <Item sx={{ borderRadius: ["0px","0px","12px"]}}><Revenue/></Item>
         </Box>
         <Box sx={{ gridColumn: ["span 12", "span 12", "span 4"] }}>
           <Item sx={{ borderRadius: ["0px","0px","12px"]}}>xs=8</Item>

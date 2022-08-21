@@ -31,7 +31,7 @@ export default function Graph(props) {
         >
           {props.city}
         </Box>
-        <Box sx={{ width: "190px", height: "8px" }}>
+        <Box sx={{ width: "190px", height: "8px", display: ["none","initial"] }}>
           <Box
             sx={{
               backgroundColor: props.color,
