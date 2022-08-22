@@ -37,6 +37,7 @@ export default function About() {
               fontWeight: "700",
               maxWidth: "380px",
               textAlign: ["center", "center", "initial"],
+              
             }}
           >
             Wecome to your dashboard
@@ -48,6 +49,8 @@ export default function About() {
               marginTop: "2rem",
               maxWidth: "600px",
               fontWeight: "500",
+              maxHeight: "308px",
+              overflow: "hidden"
             }}
           >
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -82,7 +85,7 @@ export default function About() {
             alt="team"
             src={teamImage}
           ></Box>
-          <Box sx={{ display: "flex", marginTop: "-2rem" }}>
+          <Box sx={{ display: "flex", marginTop: "-2rem", gap: "2rem" }}>
             <Box sx={{ display: "flex", alignItems: "center" }}>
               <Box
                 sx={{
@@ -101,7 +104,7 @@ export default function About() {
                   fontWeight: "700",
                   display: "flex",
                   flexDirection: "column",
-                  marginRight: "6rem",
+                 
                   fontSize: "1.5rem",
                 }}
               >
@@ -128,7 +131,7 @@ export default function About() {
                   fontWeight: "700",
                   display: "flex",
                   flexDirection: "column",
-                  marginRight: "6rem",
+                 
                   fontSize: "1.5rem",
                 }}
               >

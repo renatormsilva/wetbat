@@ -8,6 +8,12 @@ import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { AdapterDateFns } from "@mui/x-date-pickers/AdapterDateFns";
 import { DatePicker } from "@mui/x-date-pickers/DatePicker";
 import api from "../../../services/api";
+
+const formStyle = {
+  "& > :not(style)": { m: 1.7, width: ["64%", "34%"] }
+  
+  }
+
 const currencies = [
   {
     value: "Uber",
@@ -128,9 +134,7 @@ export default function Form() {
     <Box
       component="form"
       ref={formRef}
-      sx={{
-        "& > :not(style)": { m: 1.7, width: "28ch" },
-      }}
+      sx={formStyle}
       noValidate
       autoComplete="off"
       onSubmit={(e) => {
@@ -241,12 +245,14 @@ export default function Form() {
         ))}
       </PersonalTextField>
 
-      <PersonalTextField
+      <Box
+        component={PersonalTextField}
         required
         label="NAME"
         id="name"
         variant="filled"
-        style={{ marginTop: 11 }}
+        
+        sx={{marginTop: 11, width: ["74%", "72%"] }}
         onChange={(e) => handle(e)}
         value={data.name}
       />
@@ -256,7 +262,7 @@ export default function Form() {
         type="submit"
         variant="contained"
         color="success"
-        sx={{ fontWeight: "700", borderRadius: "16px", padding: "0.8rem" }}
+        sx={{ fontWeight: "700", borderRadius: "16px", padding: "0.8rem", width: ["74%", "72%"], whiteSpace: "nowrap"}}
       >
         Create a quote
       </Button>

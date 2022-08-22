@@ -25,12 +25,12 @@ export default function Dashboard() {
     <Box >
       <Box display="grid" gridTemplateColumns="repeat(12, 1fr) " sx={{gap: ["0rem","0rem","2rem"]}} alignItems="stretch">
         <Box gridColumn="span 12">
-          <Item sx={{borderRadius: ["0px","0px","12px"], backgroundImage: 'linear-gradient(to left, #5F6CAF, #40c6c5)'}}><About/></Item>
+          <Item sx={{borderRadius: ["0px","0px","12px"], backgroundImage: 'linear-gradient(to left, #5F6CAF, #74a6de)'}}><About/></Item>
         </Box>
         <Box sx={{ gridColumn: ["span 12", "span 12", "span 4"] }}>
           <Item sx={{ height: "100%", borderRadius: ["0px","0px","12px"]}}>
             <QuickQuote />
-          </Item>
+          </Item> 
         </Box>
         <Box sx={{ gridColumn: ["span 12", "span 12", "span 4"] }}>
           <Item sx={{ height: "100%", borderRadius: ["0px","0px","12px"] }}>
