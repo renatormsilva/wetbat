@@ -10,7 +10,7 @@ export default function NewLeads() {
   return (
     <Box>
       <CardHeader cardName={cardName} />
-      <Box sx={{ display: "flex", gap: "1.6rem", flexDirection: "column" }}>
+      <Box sx={{ display: "flex", gap: "1.6rem", flexDirection: "column" ,marginBottom: ["1rem", "1rem","0rem"]}}>
         <Leads
           name="John Smith"
           description="Hey! i want to place my package"

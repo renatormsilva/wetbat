@@ -17,13 +17,14 @@ export default function Chats(props) {
             src={props.photo}
             sx={{
               objectFit: "cover",
-              width: "2.7rem",
-              height: "2.7rem",
-              borderRadius: "8px",
-              boxShadow: "  rgba(0, 0, 0, 0.35) 0px 12px 15px",
+              width: "3.4rem",
+              height: "3.4rem",
+              borderRadius: "10px",
+              boxShadow: "  rgba(0, 0, 0, 0.35) 0px 6px 10px",
+              border: "solid 1px green "
             }}
           />
-          <Box sx={{ width: "12px",height: "12px",backgroundColor: "#24d64e", position: "absolute", top: -5, right: -5, borderRadius: "50%"}}>
+          <Box sx={{ width: "12px",height: "12px",backgroundColor: "secondary.main", position: "absolute", top: -5, right: -5, borderRadius: "50%"}}>
             
           </Box>
         </Box>
