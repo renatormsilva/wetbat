@@ -78,6 +78,20 @@ export default function Form() {
     name: "",
   });
 
+
+  function resetData() {
+    return setData({
+      from: "",
+      destination: "",
+      departDate: "",
+      returnDate: "",
+      people: "",
+      transportation: "",
+      name: "",
+    })
+  }
+
+ 
   function handle(e) {
     const newData = { ...data };
     newData[e.target.id] = e.target.value;
@@ -119,7 +133,10 @@ export default function Form() {
       }}
       noValidate
       autoComplete="off"
-      onSubmit={(e) => submit(e)}
+      onSubmit={(e) => {
+        submit(e)
+        return resetData()
+      }}
     >
       <PersonalTextField
         label="FROM*"
