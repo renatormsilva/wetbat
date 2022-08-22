@@ -6,20 +6,21 @@ import { useState } from "react";
 import LocationContext from "../../../context/LocationContext";
 export default function Destinations() {
   const cardName = "Popular destinations & packages";
-  const [mapLocation, setMapLocation] = useState({ lat: 39.09, lng: -95.712 });
+  const [mapLocation, setMapLocation] = useState({ lat: 36.706569, lng: -27.696564});
   const [zoom, setZoom] = useState(3);
   return (
     <LocationContext.Provider
       value={{ mapLocation, setMapLocation, setZoom, zoom }}
     >
-      <Box sx={{ position: "relative" }}>
+      <Box>
         <CardHeader cardName={cardName} />
         <Box
           sx={{
             display: "flex",
             flexDirection: "row",
-            height: "292px",
+            height: "360px",
             alignItems: "flex-end",
+            position: "relative"
           }}
         >
           <Box
