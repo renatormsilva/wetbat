@@ -18,12 +18,13 @@ export default function DestinationMap() {
     {
       id: 2,
       name: "São Paulo",
-      position: { lat: -23.567482, lng: -0.102819 },
+      position: { lat: -23.563167, lng: -46.603590 },
     },
     {
       id: 3,
       name: "Londres",
-      position: { lat: 51.515022, lng: -118.243683 },
+      position: { lat: 
+        51.504858, lng: -0.105924 },
     },
     {
       id: 4,
