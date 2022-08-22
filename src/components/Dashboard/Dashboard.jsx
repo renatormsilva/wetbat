@@ -9,6 +9,8 @@ import NewLeadsContainer from "./NewLeads/NewLeadsContainer";
 import Destinations from "./Destinations/Destinations"; 
 import  TeamChat from "./TeamChat/TeamChat";
 import Revenue from "./Revenue/Revenue";
+import PotentialRevenue from "./PotentialRevenue/PotentialRevenue";
+import CloseRatios from "./CloseRatios/CloseRatios";
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",
@@ -50,10 +52,10 @@ export default function Dashboard() {
           <Item sx={{ borderRadius: ["0px","0px","12px"]}}><Revenue/></Item>
         </Box>
         <Box sx={{ gridColumn: ["span 12", "span 12", "span 4"] }}>
-          <Item sx={{ borderRadius: ["0px","0px","12px"]}}>xs=8</Item>
+          <Item sx={{ borderRadius: ["0px","0px","12px"]}}><PotentialRevenue/></Item>
         </Box>
         <Box sx={{ gridColumn: ["span 12", "span 12", "span 4"] }}>
-          <Item sx={{ borderRadius: ["0px","0px","12px"]}}>xs=8</Item>
+          <Item sx={{ borderRadius: ["0px","0px","12px"]}}><CloseRatios/></Item>
         </Box>
       </Box>
     </Box>

@@ -9,6 +9,10 @@ import AirplaneTicketOutlinedIcon from "@mui/icons-material/AirplaneTicketOutlin
 import { Link } from "react-router-dom";
 import { useContext } from "react";
 import MyContext from "../../context/MyContext";
+import ChatBubbleOutlineIcon from "@mui/icons-material/ChatBubbleOutline";
+import SignalCellularAltIcon from "@mui/icons-material/SignalCellularAlt";
+import PieChartOutlineIcon from '@mui/icons-material/PieChartOutline';
+import HandshakeIcon from '@mui/icons-material/Handshake';
 
 export default function CardHeader(props) {
   const { setRefresh } = useContext(MyContext);
@@ -25,24 +29,45 @@ export default function CardHeader(props) {
       >
         <Box sx={{ display: "flex", flexDirection: "row", gap: "0.3rem" }}>
           <Box>
-            {props.cardName === "Quick Quote" ? (
+            {props.cardName === "Quick Quote" && (
               <KeyboardDoubleArrowRightIcon sx={{ color: "secondary.main" }} />
-            ) : undefined}
-            {props.cardName === "Pending Quotes" ? (
+            )}
+            {props.cardName === "Pending Quotes" && (
               <UpdateIcon
                 sx={{ color: "secondary.main", display: ["none", "flex"] }}
               />
-            ) : undefined}
-            {props.cardName === "New Leads" ? (
+            )}
+            {props.cardName === "New Leads" && (
               <MailOutlineIcon
                 sx={{ color: "secondary.main", display: ["none", "flex"] }}
               />
-            ) : undefined}
-            {props.cardName === "Popular destinations & packages" ? (
+            )}
+            {props.cardName === "Popular destinations & packages" && (
               <AirplaneTicketOutlinedIcon
                 sx={{ color: "secondary.main", display: ["none", "flex"] }}
               />
-            ) : undefined}
+            )}
+
+            {props.cardName === "Team Chat" && (
+              <ChatBubbleOutlineIcon
+                sx={{ color: "secondary.main", display: ["none", "flex"] }}
+              />
+            )}
+            {props.cardName === "Revenue" && (
+              <SignalCellularAltIcon
+                sx={{ color: "secondary.main", display: ["none", "flex"] }}
+              />
+            )}
+            {props.cardName === "Potential Revenue" && (
+              <PieChartOutlineIcon
+                sx={{ color: "secondary.main", display: ["none", "flex"] }}
+              />
+            )}
+            {props.cardName === "Close Ratios" && (
+              <HandshakeIcon
+                sx={{ color: "secondary.main", display: ["none", "flex"] }}
+              />
+            )}
           </Box>
           <Box
             sx={{

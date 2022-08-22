@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "@date-io/date-fns": "^2.15.0",
+    "@devexpress/dx-react-chart-material-ui": "^3.0.4",
     "@emotion/react": "^11.10.0",
     "@emotion/styled": "^11.10.0",
     "@googlemaps/react-wrapper": "^1.1.35",
@@ -25,6 +26,7 @@
     "react-scripts": "5.0.1",
     "react-super-responsive-table": "^5.2.1",
     "react-virtualized": "^9.22.3",
+    "recharts": "^2.1.13",
     "styled-components": "^5.3.5",
     "web-vitals": "^2.1.4"
   },

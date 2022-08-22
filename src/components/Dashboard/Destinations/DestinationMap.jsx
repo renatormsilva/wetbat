@@ -18,6 +18,7 @@ export default function DestinationMap() {
       <LoadScript
         id="script-loader"
         googleMapsApiKey={googleKey}
+        onError={(() => { return console.log("opa opa")})}
         language={"en"}
         region={"EN"}
         version={"weekly"}
