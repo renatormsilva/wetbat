@@ -90,7 +90,7 @@ export default function About() {
                   fontWeight: "900",
                   fontSize: "5rem",
                   marginRight: "1rem",
-                  textShadow: "8px 8px 3px black",
+                  textShadow: "6px 6px 2px black",
                 }}
               >
                 {data.leads}
@@ -117,7 +117,7 @@ export default function About() {
                   fontWeight: "900",
                   fontSize: "5rem",
                   marginRight: "1rem",
-                  textShadow: "8px 8px 3px black",
+                  textShadow: "6px 6px 2px black",
                 }}
               >
                 {data.quotesValue}
@@ -144,7 +144,7 @@ export default function About() {
                   fontWeight: "900",
                   fontSize: "5rem",
                   marginRight: "1rem",
-                  textShadow: "8px 8px 3px black",
+                  textShadow: "6px 6px 2px black",
                 }}
               >
                 {data.pending}
