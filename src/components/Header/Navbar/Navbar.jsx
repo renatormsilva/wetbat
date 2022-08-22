@@ -10,7 +10,6 @@ import Badge from "@mui/material/Badge";
 import MenuItem from "@mui/material/MenuItem";
 import Menu from "@mui/material/Menu";
 import SearchIcon from "@mui/icons-material/Search";
-import AccountCircle from "@mui/icons-material/AccountCircle";
 import MailIcon from "@mui/icons-material/Mail";
 import NotificationsIcon from "@mui/icons-material/Notifications";
 import MoreIcon from "@mui/icons-material/MoreVert";
@@ -19,7 +18,7 @@ import RocketIcon from "@mui/icons-material/Rocket";
 import Brightness7Icon from "@mui/icons-material/Brightness7";
 import Sidebar from "../Sidebar/Sidebar";
 import { Link } from "react-router-dom";
-
+import profileImage from "../../../images/profile.jpg";
 const Search = styled("div")(({ theme }) => ({
   position: "relative",
   borderRadius: theme.shape.borderRadius,
@@ -151,7 +150,17 @@ export default function Navbar() {
           aria-haspopup="true"
           color="inherit"
         >
-          <AccountCircle />
+          <Box
+            sx={{
+              width: "34px",
+              height: "34px",
+              borderRadius: "50%",
+              border: "1px solid",
+            }}
+            component="img"
+            alt="profileImage"
+            src={profileImage}
+          />
         </IconButton>
         <p>Profile</p>
       </MenuItem>
@@ -239,7 +248,17 @@ export default function Navbar() {
               onClick={handleProfileMenuOpen}
               color="inherit"
             >
-              <AccountCircle />
+              <Box
+                sx={{
+                  width: "34px",
+                  height: "34px",
+                  borderRadius: "50%",
+                  border: "1px solid",
+                }}
+                component="img"
+                alt="profileImage"
+                src={profileImage}
+              />
             </IconButton>
           </Box>
           <Box sx={{ display: { xs: "flex", md: "none" } }}>
