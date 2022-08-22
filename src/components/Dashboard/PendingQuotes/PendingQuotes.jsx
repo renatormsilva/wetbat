@@ -9,7 +9,6 @@ import HeadTableQuotes from "./HeadTableQuotes";
 import DeleteIcon from "@mui/icons-material/Delete";
 import Modal from "@mui/material/Modal";
 
-
 export default function PendingQuotes(props) {
   const [headValues, setHeadValues] = useState([
     "ID#",
@@ -44,10 +43,10 @@ export default function PendingQuotes(props) {
   }
 
   function quoteDelete() {
-    api.delete(`/quotes/${quoteId}`).then(response => {
-      console.log(response)
-    })
-    setOpen(false)
+    api.delete(`/quotes/${quoteId}`).then((response) => {
+      console.log(response);
+    });
+    setOpen(false);
   }
   const handleClose = () => setOpen(false);
 
@@ -102,7 +101,10 @@ export default function PendingQuotes(props) {
                   <Td>
                     <DeleteIcon
                       onClick={() => handleOpen(quote.id)}
-                      sx={{ color: "red" }}
+                      sx={{
+                        color: "red",
+                        "&:hover": { transform: "scale(1.4)" },
+                      }}
                     />
                   </Td>
                 </Tr>
@@ -127,12 +129,55 @@ export default function PendingQuotes(props) {
                   p: 4,
                 }}
               >
-                <Box sx={{fontWeight: "900", fontSize: "2rem", color: "primary.warning", marginBottom: "0.5rem"}}>Are you sure ?</Box>
+                <Box
+                  sx={{
+                    fontWeight: "900",
+                    fontSize: "2rem",
+                    color: "primary.warning",
+                    marginBottom: "0.5rem",
+                  }}
+                >
+                  Are you sure ?
+                </Box>
                 <Box>Are you sure you want to delete?</Box>
-                <Divider sx={{height: "8px"}}/>
-                <Box sx={{display: "flex", justifyContent: "space-evenly", marginTop: "8px"}}>
-                  <Button onClick={quoteDelete} sx={{backgroundColor: "primary.success", color: "white"}}>delete</Button>
-                  <Button onClick={handleClose} sx={{backgroundColor: "primary.warning", color: "white"}}>cancel</Button>
+                <Divider sx={{ height: "8px" }} />
+                <Box
+                  sx={{
+                    display: "flex",
+                    justifyContent: "space-evenly",
+                    marginTop: "8px",
+                  }}
+                >
+                  <Button
+                    onClick={quoteDelete}
+                    sx={{
+                      cursor: "pointer",
+                      backgroundColor: "primary.success",
+                      color: "white",
+                      "&:hover": {
+                        backgroundColor: "green",
+                        "&:hover": { transform: "scale(1.1)" },
+                      },
+                    }}
+                  >
+                    delete
+                  </Button>
+                  <Button
+                    onClick={handleClose}
+                    sx={{
+                      backgroundColor: "primary.warning",
+                      color: "white",
+                      "&:hover": {
+                        backgroundColor: "red",
+                        "&:hover": {
+                          cursor: "pointer",
+                          transform: "scale(1.1)",
+                        },
+                      },
+                    }}
+                  >
+                    cancel
+                  </Button>
                 </Box>
               </Box>
             </Modal>

@@ -93,7 +93,7 @@ export default function Form() {
 
   function submit(e) {
     e.preventDefault();
-    if (data.people && data.name) {
+    if (data.people && data.name && data.destination && data.from) {
       api
         .post("/quotes", {
           from: data.from,
@@ -124,12 +124,14 @@ export default function Form() {
       <PersonalTextField
         label="FROM*"
         id="from"
+        required
         variant="filled"
         style={{ marginTop: 11 }}
         onChange={(e) => handle(e)}
         value={data.from}
       />
       <PersonalTextField
+        required
         label="DESTINATION"
         id="destination"
         variant="filled"

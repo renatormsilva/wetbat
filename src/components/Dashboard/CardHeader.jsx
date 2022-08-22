@@ -82,19 +82,19 @@ export default function CardHeader(props) {
         <Box sx={{ display: "flex" }}>
           {props.cardName === "Pending Quotes" ? (
             <IconButton onClick={() => setRefresh(false)} size="large">
-              <RestartAltIcon />
+              <RestartAltIcon sx={{"&:hover": {transform: "scale(1.4)"}}}/>
             </IconButton>
           ) : undefined}
           {props.cardName !== "Pending Quotes" ? (
             <Link to="/">
               <IconButton size="large">
-                <FullscreenExitIcon />
+                <FullscreenExitIcon sx={{"&:hover": {transform: "scale(1.2)"}}}/>
               </IconButton>
             </Link>
           ) : (
             <Link to={currentUrl !== "/quotes" ? "/quotes" : "/"}>
               <IconButton size="large">
-                <FullscreenExitIcon />
+                <FullscreenExitIcon sx={{"&:hover": {transform: "scale(1.2)"}}}/>
               </IconButton>
             </Link>
           )}

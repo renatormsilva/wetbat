@@ -9,13 +9,13 @@ export default function PotentialRevenue() {
     { name: "Geek-i-knack", value: 200 },
     { name: "Geek-o-mania", value: 1000 },
   ];
-  const COLORS = ["#0088FE", "#00C49F", "#FFBB28", "#FF8042"]
-  const SCOLORS = ["#FFBB28", "#FF8042", "#00C49F", "#0088FE"]
-  const TCOLORS = ["#FF8042", "#FFBB28", "#0088FE", "#00C49F"]
+  const COLORS = ["#0088FE", "#00C49F", "#FFBB28", "#FF8042"];
+  const SCOLORS = ["#FFBB28", "#FF8042", "#00C49F", "#0088FE"];
+  const TCOLORS = ["#FF8042", "#FFBB28", "#0088FE", "#00C49F"];
   return (
     <Box>
       <CardHeader cardName="Potential Revenue" />
-      <Box sx={{display: "flex", }}>
+      <Box sx={{ display: "flex" }}>
         <ResponsiveContainer width="33%" height={300}>
           <PieChart>
             <Pie data={data} dataKey="value" fill="#8884d8">
