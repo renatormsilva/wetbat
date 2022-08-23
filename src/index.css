@@ -9,6 +9,13 @@ body {
   background-color: #eeeef9
 }
 
+@media only screen and (max-width: 1550px) and (min-width: 1000px) {
+  body {
+    zoom: 0.7
+  }
+}
+
+
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
