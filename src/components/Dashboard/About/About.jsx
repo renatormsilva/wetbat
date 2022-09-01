@@ -14,7 +14,7 @@ export default function About() {
     pending: 40,
   };
   useEffect(() => {
-    api.get("/quotes").then(({ data }) => {
+    api.get("/user").then(({ data }) => {
       return data.length ? setQuotesValue(data.length) : 0
     });
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -135,7 +135,7 @@ export default function About() {
                   fontSize: "1.5rem",
                 }}
               >
-                <Box>QUOTES</Box>
+                <Box>USERS</Box>
                 <Box>CREATED</Box>
               </Box>
             </Box>

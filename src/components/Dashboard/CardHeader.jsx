@@ -29,10 +29,10 @@ export default function CardHeader(props) {
       >
         <Box sx={{ display: "flex", flexDirection: "row", gap: "0.3rem" }}>
           <Box>
-            {props.cardName === "Quick Quote" && (
+            {props.cardName === "Quick User" && (
               <KeyboardDoubleArrowRightIcon sx={{ color: "secondary.main" }} />
             )}
-            {props.cardName === "Pending Quotes" && (
+            {props.cardName === "Pending Users" && (
               <UpdateIcon
                 sx={{ color: "secondary.main", display: ["none", "flex"] }}
               />
@@ -80,12 +80,12 @@ export default function CardHeader(props) {
           </Box>
         </Box>
         <Box sx={{ display: "flex" }}>
-          {props.cardName === "Pending Quotes" ? (
+          {props.cardName === "Pending Users" ? (
             <IconButton onClick={() => setRefresh(false)} size="large">
               <RestartAltIcon sx={{"&:hover": {transform: "scale(1.4)"}}}/>
             </IconButton>
           ) : undefined}
-          {props.cardName !== "Pending Quotes" ? (
+          {props.cardName !== "Pending Users" ? (
             <Link to="/">
               <IconButton size="large">
                 <FullscreenExitIcon sx={{"&:hover": {transform: "scale(1.2)"}}}/>

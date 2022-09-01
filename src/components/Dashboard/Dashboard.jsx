@@ -29,7 +29,7 @@ export default function Dashboard() {
         </Box>
         <Box sx={{ gridColumn: ["span 12", "span 12", "span 4"] }}>
           <Item sx={{ height: "100%", borderRadius: ["0px","0px","12px"]}}>
-            <QuickQuote />
+             {/* <QuickQuote />  */}
           </Item> 
         </Box>
         <Box sx={{ gridColumn: ["span 12", "span 12", "span 4"] }}>

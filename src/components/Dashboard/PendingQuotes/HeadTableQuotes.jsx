@@ -14,12 +14,12 @@ export default function HeadTableQuotes(props) {
       <Tr>
         <Th>ID#</Th>
         <Th>NAME</Th>
-        <Th>FROM</Th>
-        <Th>DESTINATION</Th>
-        <Th className="fullSize">DEPART DATE</Th>
-        <Th className="fullSize">RETURN DATE</Th>
-        <Th className="fullSize">PEOPLE</Th>
-        <Th className="fullSize transport">TRANSPORTATION</Th>
+        <Th>CITY</Th>
+        <Th>STATE</Th>
+        <Th className="fullSize">ZIPCODE</Th>
+        <Th className="fullSize">NEIGHBORHOOD</Th>
+        <Th className="fullSize">BIRTHDATE</Th>
+        <Th className="fullSize transport">DOCUMENT</Th>
         <Th className="fullSize">SETTINGS</Th>
       </Tr>
     </Box>

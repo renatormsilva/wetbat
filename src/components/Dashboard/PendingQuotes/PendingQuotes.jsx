@@ -13,20 +13,20 @@ export default function PendingQuotes(props) {
   const [headValues, setHeadValues] = useState([
     "ID#",
     "NAME",
-    "FROM",
-    "DESTINATION",
+    "STREET",
+    "CITY",
   ]);
   const [quotes, setQuotes] = useState([]);
   const [refresh, setRefresh] = useState(true);
   const [quoteId, setQuoteId] = useState([]);
   const [open, setOpen] = useState(false);
 
-  const cardName = "Pending Quotes";
+  const cardName = "Pending Users";
   const fullHeadValues = props.pageHeadValues;
   const smSizeTable = headValues.length <= 4 ? true : false;
 
   useEffect(() => {
-    api.get("/quotes").then(({ data }) => {
+    api.get("/user").then(({ data }) => {
       setQuotes(data.reverse());
     });
     if (fullHeadValues) {
@@ -43,7 +43,7 @@ export default function PendingQuotes(props) {
   }
 
   function quoteDelete() {
-    api.delete(`/quotes/${quoteId}`).then((response) => {
+    api.delete(`/user/${quoteId}`).then((response) => {
       console.log(response);
     });
     setOpen(false);
@@ -83,8 +83,8 @@ export default function PendingQuotes(props) {
                   <Tr key={index}>
                     <Td key={index}>{quote.id}</Td>
                     <Td key={index}>{quote.name}</Td>
-                    <Td key={index}>{quote.from}</Td>
-                    <Td key={index}>{quote.destination}</Td>
+                    <Td key={index}>{quote.city}</Td>
+                    <Td key={index}>{quote.state}</Td>
                   </Tr>
                 );
               }
@@ -92,12 +92,12 @@ export default function PendingQuotes(props) {
                 <Tr key={index}>
                   <Td key={index}>{quote.id}</Td>
                   <Td key={index}>{quote.name}</Td>
-                  <Td key={index}>{quote.from}</Td>
-                  <Td key={index}>{quote.destination}</Td>
-                  <Td key={index}>{quote.departDate}</Td>
-                  <Td key={index}>{quote.returnDate}</Td>
-                  <Td key={index}>{quote.people}</Td>
-                  <Td key={index}>{quote.transportation}</Td>
+                  <Td key={index}>{quote.city}</Td>
+                  <Td key={index}>{quote.state}</Td>
+                  <Td key={index}>{quote.zipcode}</Td>
+                  <Td key={index}>{quote.neighborhood}</Td>
+                  <Td key={index}>{quote.birthdate}</Td>
+                  <Td key={index}>{quote.document}</Td>
                   <Td>
                     <DeleteIcon
                       onClick={() => handleOpen(quote.id)}

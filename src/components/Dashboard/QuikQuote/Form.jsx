@@ -163,7 +163,7 @@ export default function Form() {
       <LocalizationProvider dateAdapter={AdapterDateFns}>
         <DatePicker
           sx={{}}
-          label="DEPART DATE"
+          label="BIRTH DATE"
           openTo="year"
           variant="filled"
           views={["year", "month", "day"]}
@@ -187,31 +187,7 @@ export default function Form() {
           )}
         />
 
-        <DatePicker
-          sx={{}}
-          label="RETURN DATE"
-          openTo="year"
-          id="returnDate"
-          variant="filled"
-          views={["year", "month", "day"]}
-          value={returnValue}
-          onChange={(e) => {
-            setReturnValue(e);
-          }}
-          renderInput={(params) => (
-            <PersonalTextField
-              sx={{
-                backgroundColor: "primary.dark",
-                borderRadius: 2,
-                "& .MuiOutlinedInput-notchedOutline": {
-                  border: "none",
-                },
-              }}
-              id="reddit-input"
-              {...params}
-            />
-          )}
-        />
+        
       </LocalizationProvider>
 
       <PersonalTextField

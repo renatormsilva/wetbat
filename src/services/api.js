@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const api = axios.create({
-  baseURL: "https://wetbat--api.herokuapp.com/"
+  baseURL: "https://meeguapi.herokuapp.com/"
 })
 
 export default api;
