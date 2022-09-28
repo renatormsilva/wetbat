@@ -13,7 +13,7 @@ import SearchIcon from "@mui/icons-material/Search";
 import MailIcon from "@mui/icons-material/Mail";
 import NotificationsIcon from "@mui/icons-material/Notifications";
 import MoreIcon from "@mui/icons-material/MoreVert";
-import Bat from "../../../images/bats.png";
+import Bat from "../../../images/remedio.png";
 import RocketIcon from "@mui/icons-material/Rocket";
 import Brightness7Icon from "@mui/icons-material/Brightness7";
 import Sidebar from "../Sidebar/Sidebar";
@@ -196,7 +196,7 @@ export default function Navbar() {
             component="div"
             sx={{ display: { xs: "none", md: "block", marginLeft: 8 } }}
           >
-            Wet Bat
+            Drugstore Delivery
           </Typography>
 
           <Box sx={{ flexGrow: 1 }} />

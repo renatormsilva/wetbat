@@ -3,7 +3,7 @@ import PendingQuotes from "../components/Dashboard/PendingQuotes/PendingQuotes";
 export default function Quotes() {
   const pageHeadValues = [
     "ID #",
-    "NAME",
+    "REMÉDIO",
     "FROM",
     "DESTINATION",
     "DEPART DATE",

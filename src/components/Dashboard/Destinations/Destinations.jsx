@@ -5,7 +5,7 @@ import DestinationMap from "./DestinationMap";
 import { useState } from "react";
 import LocationContext from "../../../context/LocationContext";
 export default function Destinations() {
-  const cardName = "Popular destinations & packages";
+  const cardName = "Localizações Com Mais Vendas";
   const [mapLocation, setMapLocation] = useState({ lat: 36.706569, lng: -27.696564});
   const [zoom, setZoom] = useState(3);
   return (

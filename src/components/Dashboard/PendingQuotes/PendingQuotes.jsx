@@ -12,16 +12,16 @@ import Modal from "@mui/material/Modal";
 export default function PendingQuotes(props) {
   const [headValues, setHeadValues] = useState([
     "ID#",
-    "NAME",
-    "FROM",
-    "DESTINATION",
+    "REMÉDIO",
+    "DESTINO",
+    "QUANTIDADE",
   ]);
   const [quotes, setQuotes] = useState([]);
   const [refresh, setRefresh] = useState(true);
   const [quoteId, setQuoteId] = useState([]);
   const [open, setOpen] = useState(false);
 
-  const cardName = "Pending Quotes";
+  const cardName = "Remédios Disponíveis";
   const fullHeadValues = props.pageHeadValues;
   const smSizeTable = headValues.length <= 4 ? true : false;
 
@@ -82,22 +82,25 @@ export default function PendingQuotes(props) {
                 return (
                   <Tr key={index}>
                     <Td key={index}>{quote.id}</Td>
-                    <Td key={index}>{quote.name}</Td>
                     <Td key={index}>{quote.from}</Td>
                     <Td key={index}>{quote.destination}</Td>
+
+                    <Td key={index}>{quote.people}</Td>
                   </Tr>
                 );
               }
               return (
                 <Tr key={index}>
                   <Td key={index}>{quote.id}</Td>
-                  <Td key={index}>{quote.name}</Td>
                   <Td key={index}>{quote.from}</Td>
                   <Td key={index}>{quote.destination}</Td>
+
+                  <Td key={index}>{quote.people}</Td>
                   <Td key={index}>{quote.departDate}</Td>
                   <Td key={index}>{quote.returnDate}</Td>
-                  <Td key={index}>{quote.people}</Td>
                   <Td key={index}>{quote.transportation}</Td>
+
+                  <Td key={index}>{quote.name}</Td>
                   <Td>
                     <DeleteIcon
                       onClick={() => handleOpen(quote.id)}

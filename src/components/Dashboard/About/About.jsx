@@ -1,5 +1,5 @@
 import { Box } from "@mui/material";
-import teamImage from "../../../images/team4.svg";
+import teamImage from "../../../images/medicine.svg";
 import api from "../../../services/api"
 import { useEffect, useState } from "react";
 
@@ -40,7 +40,7 @@ export default function About() {
               
             }}
           >
-            Wecome to your dashboard
+            Bem-vindos a Drugstore Delivery
           </Box>
           <Box
             sx={{
@@ -53,7 +53,7 @@ export default function About() {
               overflow: "hidden"
             }}
           >
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            Nós somos a Drugstore Delivery, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Vel
             pretium lectus quam id leo in vitae. Lacus sed turpis tincidunt id
             aliquet risus feugiat. Quisque id diam vel quam elementum. Nisl
@@ -108,8 +108,8 @@ export default function About() {
                   fontSize: "1.5rem",
                 }}
               >
-                <Box>NEW</Box>
-                <Box>LEADS</Box>
+                <Box>REMÉDIOS</Box>
+                <Box>VENDIDOS</Box>
               </Box>
             </Box>
 
@@ -135,8 +135,8 @@ export default function About() {
                   fontSize: "1.5rem",
                 }}
               >
-                <Box>QUOTES</Box>
-                <Box>CREATED</Box>
+                <Box>REMÉDIOS</Box>
+                <Box>DISPONÍVEIS</Box>
               </Box>
             </Box>
 
@@ -161,8 +161,8 @@ export default function About() {
                   fontSize: "1.5rem",
                 }}
               >
-                <Box>PENDING</Box>
-                <Box>ORDERS</Box>
+                <Box>REMÉDIOS</Box>
+                <Box>PENDENTES</Box>
               </Box>
             </Box>
           </Box>

@@ -3,7 +3,7 @@ import CardHeader from '../CardHeader'
 import Form from "./Form";
 
 export default function QuickQuote() {
-  const cardName = 'Quick Quote'
+  const cardName = 'Adicionar Remédios'
   return (
     <Box>
       <CardHeader cardName={cardName}/>

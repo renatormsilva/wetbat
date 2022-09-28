@@ -29,41 +29,41 @@ export default function CardHeader(props) {
       >
         <Box sx={{ display: "flex", flexDirection: "row", gap: "0.3rem" }}>
           <Box>
-            {props.cardName === "Quick Quote" && (
+            {props.cardName === "Adicionar Remédios" && (
               <KeyboardDoubleArrowRightIcon sx={{ color: "secondary.main" }} />
             )}
-            {props.cardName === "Pending Quotes" && (
+            {props.cardName === "Remédios Disponíveis" && (
               <UpdateIcon
                 sx={{ color: "secondary.main", display: ["none", "flex"] }}
               />
             )}
-            {props.cardName === "New Leads" && (
+            {props.cardName === "Novos Compradores" && (
               <MailOutlineIcon
                 sx={{ color: "secondary.main", display: ["none", "flex"] }}
               />
             )}
-            {props.cardName === "Popular destinations & packages" && (
+            {props.cardName === "Localizações Com Mais Vendas" && (
               <AirplaneTicketOutlinedIcon
                 sx={{ color: "secondary.main", display: ["none", "flex"] }}
               />
             )}
 
-            {props.cardName === "Team Chat" && (
+            {props.cardName === "Chat" && (
               <ChatBubbleOutlineIcon
                 sx={{ color: "secondary.main", display: ["none", "flex"] }}
               />
             )}
-            {props.cardName === "Revenue" && (
+            {props.cardName === "Remédios Mais Vendidos" && (
               <SignalCellularAltIcon
                 sx={{ color: "secondary.main", display: ["none", "flex"] }}
               />
             )}
-            {props.cardName === "Potential Revenue" && (
+            {props.cardName === "Potencial De Vendas" && (
               <PieChartOutlineIcon
                 sx={{ color: "secondary.main", display: ["none", "flex"] }}
               />
             )}
-            {props.cardName === "Close Ratios" && (
+            {props.cardName === "Porcentagem de Vendas" && (
               <HandshakeIcon
                 sx={{ color: "secondary.main", display: ["none", "flex"] }}
               />
@@ -85,7 +85,7 @@ export default function CardHeader(props) {
               <RestartAltIcon sx={{"&:hover": {transform: "scale(1.4)"}}}/>
             </IconButton>
           ) : undefined}
-          {props.cardName !== "Pending Quotes" ? (
+          {props.cardName !== "Remédios Disponíveis" ? (
             <Link to="/">
               <IconButton size="large">
                 <FullscreenExitIcon sx={{"&:hover": {transform: "scale(1.2)"}}}/>

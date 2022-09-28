@@ -11,7 +11,7 @@ export default function CloseRatios() {
   const COLORS = ["#00C49F", "#FF8042"];
   return (
     <Box>
-      <CardHeader cardName="Close Ratios" />
+      <CardHeader cardName="Porcentagem de Vendas" />
       <Box sx={{ position: "relative" }}>
         <ResponsiveContainer width="100%" height={300}>
           <PieChart>

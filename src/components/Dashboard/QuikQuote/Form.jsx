@@ -10,32 +10,10 @@ import { DatePicker } from "@mui/x-date-pickers/DatePicker";
 import api from "../../../services/api";
 
 const formStyle = {
-  "& > :not(style)": { m: 1.7, width: ["64%", "34%"] }
-  
-  }
+  "& > :not(style)": { m: 1.7, width: ["64%", "34%"] },
+};
 
-const currencies = [
-  {
-    value: "Uber",
-    label: "Uber",
-  },
-  {
-    value: "Taxi",
-    label: "Taxi",
-  },
-  {
-    value: "Rental Car",
-    label: "Rental Car",
-  },
-  {
-    value: "Public Transportation",
-    label: "Public Transportation",
-  },
-  {
-    value: "Other",
-    label: "Other",
-  },
-];
+
 
 const PersonalTextField = styled((props) => (
   <TextField InputProps={{ disableUnderline: true }} {...props} />
@@ -70,7 +48,7 @@ const PersonalTextField = styled((props) => (
 export default function Form() {
   const [departValue, setDepartValue] = useState(new Date());
   const [returnValue, setReturnValue] = useState(new Date());
-  const [currency, setCurrency] = useState("Uber");
+  const [currency] = useState("Uber");
 
   const formRef = React.useRef();
 
@@ -84,7 +62,6 @@ export default function Form() {
     name: "",
   });
 
-
   function resetData() {
     return setData({
       from: "",
@@ -94,10 +71,9 @@ export default function Form() {
       people: "",
       transportation: "",
       name: "",
-    })
+    });
   }
 
- 
   function handle(e) {
     const newData = { ...data };
     newData[e.target.id] = e.target.value;
@@ -107,9 +83,6 @@ export default function Form() {
     setData(newData);
   }
 
-  const handleChange = (event) => {
-    setCurrency(event.target.value);
-  };
 
   function submit(e) {
     e.preventDefault();
@@ -138,12 +111,12 @@ export default function Form() {
       noValidate
       autoComplete="off"
       onSubmit={(e) => {
-        submit(e)
-        return resetData()
+        submit(e);
+        return resetData();
       }}
     >
       <PersonalTextField
-        label="FROM*"
+        label="REMÉDIO"
         id="from"
         required
         variant="filled"
@@ -153,7 +126,7 @@ export default function Form() {
       />
       <PersonalTextField
         required
-        label="DESTINATION"
+        label="DESTINO"
         id="destination"
         variant="filled"
         style={{ marginTop: 11 }}
@@ -163,7 +136,7 @@ export default function Form() {
       <LocalizationProvider dateAdapter={AdapterDateFns}>
         <DatePicker
           sx={{}}
-          label="DEPART DATE"
+          label="DATA"
           openTo="year"
           variant="filled"
           views={["year", "month", "day"]}
@@ -189,7 +162,7 @@ export default function Form() {
 
         <DatePicker
           sx={{}}
-          label="RETURN DATE"
+          label="DIA MÁXIMO DE VENDA"
           openTo="year"
           id="returnDate"
           variant="filled"
@@ -216,7 +189,7 @@ export default function Form() {
 
       <PersonalTextField
         required
-        label="PEOPLE"
+        label="QUANTIDADE"
         type="number"
         id="people"
         variant="filled"
@@ -224,47 +197,35 @@ export default function Form() {
         onChange={(e) => handle(e)}
         value={data.people}
       />
-
-      <PersonalTextField
-        focused
-        label="TRANSPORTATION"
-        select
-        id="transportation "
-        variant="filled"
-        style={{ marginTop: 11 }}
-        value={currency}
-        onChange={handleChange}
-        SelectProps={{
-          native: true,
-        }}
-      >
-        {currencies.map((option) => (
-          <option key={option.value} value={option.value}>
-            {option.label}
-          </option>
-        ))}
-      </PersonalTextField>
-
       <Box
         component={PersonalTextField}
         required
-        label="NAME"
+        label="NOME"
         id="name"
         variant="filled"
-        
-        sx={{marginTop: 11, width: ["74%", "72%"] }}
+        sx={{ marginTop: 11, width: ["74%", "72%"] }}
         onChange={(e) => handle(e)}
         value={data.name}
       />
+      <Button variant="contained" component="label">
+        Adicionar Bula
+        <input type="file" hidden />
+      </Button>
 
       <Button
         onClick={() => formRef.current.reportValidity()}
         type="submit"
         variant="contained"
         color="success"
-        sx={{ fontWeight: "700", borderRadius: "16px", padding: "0.8rem", width: ["74%", "72%"], whiteSpace: "nowrap"}}
+        sx={{
+          fontWeight: "700",
+          borderRadius: "16px",
+          padding: "0.8rem",
+          width: ["74%", "72%"],
+          whiteSpace: "nowrap",
+        }}
       >
-        Create a quote
+        Criar Remédio
       </Button>
     </Box>
   );

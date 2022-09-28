@@ -7,7 +7,7 @@ import karen from "../../../images/perfil3.png";
 import jane from "../../../images/perfil4.jpg";
 
 export default function TeamChat() {
-  const cardName = "Team Chat";
+  const cardName = "Chat";
   return (
     <Box>
       <CardHeader cardName={cardName} />

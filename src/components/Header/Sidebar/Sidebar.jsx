@@ -51,7 +51,7 @@ export default function Sidebar(props) {
       backgroundColor="primary.light"
     >
       <List>
-        {["home", "quotes", "leads", "tours"].map((text, index) => (
+        {["home", "Remédios", "leads", "tours"].map((text, index) => (
           <ListItem key={text} sx={{ padding: ["15px", "20px"] }}>
             <ListItemButton
               component={Link}

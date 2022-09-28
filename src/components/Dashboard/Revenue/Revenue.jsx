@@ -24,7 +24,7 @@ const data = [
 export default function Revenue() {
   return (
     <Box>
-      <CardHeader cardName="Revenue" />
+      <CardHeader cardName="Remédios Mais Vendidos" />
       <ResponsiveContainer width="95%" height={300}>
         <LineChart
           

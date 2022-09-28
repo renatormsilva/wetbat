@@ -6,7 +6,7 @@ import nathan from "../../../images/perfil2.jpg";
 import karen from "../../../images/perfil3.png";
 import jane from "../../../images/perfil4.jpg";
 export default function NewLeads() {
-  const cardName = "New Leads";
+  const cardName = "Novos Compradores";
   return (
     <Box>
       <CardHeader cardName={cardName} />

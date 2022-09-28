@@ -14,7 +14,7 @@ export default function PotentialRevenue() {
   const TCOLORS = ["#FF8042", "#FFBB28", "#0088FE", "#00C49F"];
   return (
     <Box>
-      <CardHeader cardName="Potential Revenue" />
+      <CardHeader cardName="Potencial De Vendas" />
       <Box sx={{ display: "flex" }}>
         <ResponsiveContainer width="33%" height={300}>
           <PieChart>
